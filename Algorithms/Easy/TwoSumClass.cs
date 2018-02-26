@@ -26,11 +26,12 @@ namespace Algorithms.Easy
 
             for (var x = 0; x < nums.Length; x++)
             {
-                hashtable.Add(nums[x], x);
-                if (hashtable.ContainsKey((target - nums[x])) && target - nums[x] != nums[x])
+                if (hashtable.ContainsKey((target - nums[x])) )
                 {
-                    return new int[] { (int)hashtable[target - nums[x]], (int)hashtable[nums[x]] };
+                    return new int[] { (int)hashtable[target - nums[x]], x};
                 }
+
+                if (!hashtable.ContainsKey((nums[x]))) hashtable.Add(nums[x], x);
 
             }
 

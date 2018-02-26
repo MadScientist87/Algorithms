@@ -8,10 +8,10 @@ namespace Algorithms
         static void Main(string[] args)
         {
             TwoSumClass test = new TwoSumClass();
-            int[] nums = new int []{ 2, 7, 11, 15 };
-            int target = 9;
+            int[] nums = new int []{ 800, 4, 800, 21 };
+            int target = 821;
            var answer= test.TwoSum(nums, target);
-            Console.WriteLine(answer[0]+" "+answer[1]);
+            Console.WriteLine(answer[0]+" "+ answer[1]);
         }
     }
 }
