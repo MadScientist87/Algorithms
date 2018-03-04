@@ -13,9 +13,12 @@ namespace Algorithms
             //var answer= test.TwoSum(nums, target);
             //Console.WriteLine(answer[0]+" "+ answer[1]);
 
-            ReverseInteger test = new ReverseInteger();
-            int num = 123;
-            Console.WriteLine(test.Reverse(num)); 
+            //ReverseInteger test = new ReverseInteger();
+            //int num = 123;
+            //Console.WriteLine(test.Reverse(num)); 
+
+            IsPalindromeInteger test = new IsPalindromeInteger();
+            test.IsPalindrome(303);
         }
     }
 }
