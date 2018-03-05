@@ -6,8 +6,4 @@
     <ApplicationIcon />
     <StartupObject />
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="Easy\" />
-  </ItemGroup>
 </Project>

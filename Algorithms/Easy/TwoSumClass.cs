@@ -16,10 +16,6 @@ namespace Algorithms.Easy
 
     public class TwoSumClass
     {
-        public TwoSumClass()
-        {
-        }
-
         public int[] TwoSum(int[] nums, int target)
         {
             Hashtable hashtable = new Hashtable();

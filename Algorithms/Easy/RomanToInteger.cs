@@ -5,10 +5,6 @@ namespace Algorithms.Easy
 {
     public class RomanToInteger
     {
-        public RomanToInteger()
-        {
-        }
-
         public int RomanToInt(string s)
         {
             s = s.ToUpper();

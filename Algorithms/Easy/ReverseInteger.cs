@@ -3,10 +3,6 @@ namespace Algorithms.Easy
 {
     public class ReverseInteger
     {
-        public ReverseInteger()
-        {
-        }
-
         public int Reverse(int x)
         {
             int result = 0;

@@ -3,10 +3,6 @@ namespace Algorithms.Easy
 {
     public class IsPalindromeInteger
     {
-        public IsPalindromeInteger()
-        {
-        }
-
         public bool IsPalindrome(int x)
         {
             if (x < 0 || (x % 10 == 0 && x != 0))

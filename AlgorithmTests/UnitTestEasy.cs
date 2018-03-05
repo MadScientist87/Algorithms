@@ -38,5 +38,13 @@ namespace AlgorithmTests
             Assert.IsTrue(isPalindromeInteger.IsPalindrome(303));
         }
 
+        [TestMethod]
+        public void LongestCommonPrefix()
+        {
+            LongestCommonPrefixClass longestCommonPrefixClass = new LongestCommonPrefixClass();
+            var result = longestCommonPrefixClass.LongestCommonPrefix(new[] { "earthly", "earth", "ear" });
+            Assert.AreEqual(result, "ear");
+        }
+
     }
 }
