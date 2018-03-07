@@ -32,6 +32,20 @@ namespace AlgorithmTests
         }
 
         [TestMethod]
+        public void IsValidParentheses()
+        {
+            ValidParentheses isValidParentheses = new ValidParentheses();
+            string sample = "((";
+            Assert.AreEqual(isValidParentheses.IsValid(sample), false);
+            sample = "(())";
+            Assert.AreEqual(isValidParentheses.IsValid(sample), true);
+            sample = "((])";
+            Assert.AreEqual(isValidParentheses.IsValid(sample), false);
+            sample = "([)]";
+            Assert.AreEqual(isValidParentheses.IsValid(sample), false);
+        }
+
+        [TestMethod]
         public void IsPalindromeInteger()
         {
             IsPalindromeInteger isPalindromeInteger = new IsPalindromeInteger();
