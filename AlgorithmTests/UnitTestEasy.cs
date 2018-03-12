@@ -60,5 +60,27 @@ namespace AlgorithmTests
             Assert.AreEqual(result, "ear");
         }
 
+        [TestMethod]
+        public void SortedLinkedList()
+        {
+            SortedLinkedList sortedLinkedList = new SortedLinkedList();
+            var l1 = new ListNode(1);
+            var second= l1.next= new ListNode(2);
+            second.next= new ListNode(4);
+
+            var l2 = new ListNode(1);
+            var secondl2 = l2.next = new ListNode(3);
+            secondl2.next = new ListNode(4);
+
+           var answer= sortedLinkedList.MergeTwoLists(l1, l2);
+
+            while (answer != null)
+            {
+                var test = answer.val;
+
+                answer = answer.next;
+            }
+        }
+
     }
 }
