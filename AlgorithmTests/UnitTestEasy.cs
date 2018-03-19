@@ -65,14 +65,14 @@ namespace AlgorithmTests
         {
             SortedLinkedList sortedLinkedList = new SortedLinkedList();
             var l1 = new ListNode(1);
-            var second= l1.next= new ListNode(2);
-            second.next= new ListNode(4);
+            var second = l1.next = new ListNode(2);
+            second.next = new ListNode(4);
 
             var l2 = new ListNode(1);
             var secondl2 = l2.next = new ListNode(3);
             secondl2.next = new ListNode(4);
 
-           var answer= sortedLinkedList.MergeTwoLists(l1, l2);
+            var answer = sortedLinkedList.MergeTwoLists(l1, l2);
 
             while (answer != null)
             {
@@ -82,5 +82,22 @@ namespace AlgorithmTests
             }
         }
 
+        [TestMethod]
+        public void RemoveElement()
+        {
+            RemoveElementsInArray RemoveElementsInArray = new RemoveElementsInArray();
+            int[] theArray = new int[] { 3, 2, 2, 3 };
+            int length = RemoveElementsInArray.RemoveElement(ref theArray, 3);
+            CollectionAssert.AreEqual(theArray.SubArray(0, length), new int[] { 2, 2 });
+        }
+
+        [TestMethod]
+        public void StrStrTest()
+        {
+            StrStrImplentation StrStrImplentation = new StrStrImplentation();
+            var index = StrStrImplentation.StrStr("hello", "ll");
+            Assert.AreEqual(index, 2);
+        }
     }
+
 }
