@@ -1,5 +1,6 @@
 using Algorithms.Easy;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Text;
 
 namespace AlgorithmTests
 {
@@ -98,6 +99,40 @@ namespace AlgorithmTests
             var index = StrStrImplentation.StrStr("hello", "ll");
             Assert.AreEqual(index, 2);
         }
+
+        [TestMethod]
+        public void BitWise()
+        {
+            var answer = 8 << 4;
+            Assert.AreEqual(answer, 128);
+        }
+
+        [TestMethod]
+        public void SearchInsert()
+        {
+            var nums = new int[] { 1, 3, 5, 6 };
+            var target = 2;
+            SearchInsertClass SearchInsertClass = new SearchInsertClass();
+            var answer = SearchInsertClass.SearchInsert(nums, target);
+            Assert.AreEqual(answer, 1);
+        }
+
+        [TestMethod]
+        public void CountAndSay()
+        {
+            CountAndSayClass CountAndSayClass = new CountAndSayClass();
+            var answer = CountAndSayClass.CountAndSay(5);
+        }
+
+        [TestMethod]
+        public void MaximumSubarray()
+        {
+            MaximumSubarray MaximumSubarray = new MaximumSubarray();
+            int[] array = new []{ -2, 1, -3, 4, -1, 2, 1, -5, 4 };
+            var answer = MaximumSubarray.MaxSubArray(array);
+            Assert.AreEqual(answer, 6);
+        }
+
     }
 
 }
