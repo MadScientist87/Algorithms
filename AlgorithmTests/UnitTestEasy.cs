@@ -128,11 +128,18 @@ namespace AlgorithmTests
         public void MaximumSubarray()
         {
             MaximumSubarray MaximumSubarray = new MaximumSubarray();
-            int[] array = new []{ -2, 1, -3, 4, -1, 2, 1, -5, 4 };
+            int[] array = new[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
             var answer = MaximumSubarray.MaxSubArray(array);
             Assert.AreEqual(answer, 6);
         }
 
+        [TestMethod]
+        public void LengthofLastWord()
+        {
+            LengthofLastWordClass LengthofLastWordClass = new LengthofLastWordClass();
+            var answer = LengthofLastWordClass.LengthOfLastWord("a  ");
+            Assert.AreEqual(answer, 1);
+        }
     }
 
 }

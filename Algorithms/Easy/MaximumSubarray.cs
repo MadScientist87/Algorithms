@@ -8,7 +8,7 @@ namespace Algorithms.Easy
     {
         public int MaxSubArray(int[] nums)
         {
-            int high = 0;
+            int high = nums[0];
             for (int i = 0; i < nums.Length; i++)
             {
                 int sum = nums[i];
