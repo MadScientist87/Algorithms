@@ -140,6 +140,14 @@ namespace AlgorithmTests
             var answer = LengthofLastWordClass.LengthOfLastWord("a  ");
             Assert.AreEqual(answer, 1);
         }
+
+        [TestMethod]
+        public void PlusOne()
+        {
+            PlusOneClass PlusOneClass = new PlusOneClass();
+            var answer = PlusOneClass.PlusOne(new[] { 9,8,9});
+         
+        }
     }
 
 }
