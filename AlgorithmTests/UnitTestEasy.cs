@@ -145,8 +145,50 @@ namespace AlgorithmTests
         public void PlusOne()
         {
             PlusOneClass PlusOneClass = new PlusOneClass();
-            var answer = PlusOneClass.PlusOne(new[] { 9,8,9});
-         
+            var answer = PlusOneClass.PlusOne(new[] { 9, 8, 9 });
+
+        }
+
+        [TestMethod]
+        public void AddBinary()
+        {
+            AddBinaryClass AddBinaryClass = new AddBinaryClass();
+            var answer = AddBinaryClass.addBinary("1110110101", "1110111011");
+
+        }
+        [TestMethod]
+        public void SqrtX()
+        {
+            SqrtX SqrtX = new SqrtX();
+            var answer = SqrtX.FloorSqrt(8);
+        }
+
+        [TestMethod]
+        public void ClimbStairs()
+        {
+            ClimbStairsClass ClimbStairsClass = new ClimbStairsClass();
+            var answer = ClimbStairsClass.ClimbStairsConcise(4);
+        }
+
+
+        [TestMethod]
+        public void DeleteDuplicatesList()
+        {
+            DeleteDuplicatesNodes DeleteDuplicatesNodes = new DeleteDuplicatesNodes();
+            var l1 = new ListNode(2);
+            var second = l1.next = new ListNode(2);
+            second.next = new ListNode(4);
+
+           
+
+            var answer = DeleteDuplicatesNodes.DeleteDuplicates(l1);
+
+            while (answer != null)
+            {
+                var test = answer.val;
+
+                answer = answer.next;
+            }
         }
     }
 
