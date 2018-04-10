@@ -190,6 +190,45 @@ namespace AlgorithmTests
                 answer = answer.next;
             }
         }
+        [TestMethod]
+        public void MergeSortedArray()
+        {
+            MergeSortedArrayClass MergeSortedArrayClass = new MergeSortedArrayClass();
+            int[] num1 = new int[1];
+            //num1[0] = 0;
+            //num1[1] = 2;
+            //num1[2] = 3;
+            //num1[3] = 4;
+            //num1[4] = 5;
+
+            int[] num2 = new int[1];
+            num2[0] = 1;
+            //num2[1] = 4;
+           
+
+
+
+           MergeSortedArrayClass.Merge(ref num1,0,ref num2, 1);
+        }
+
+        [TestMethod]
+        public void SameTree()
+        {
+            TreeNode tree = new TreeNode(1);
+            tree.left = new TreeNode(2);
+            tree.right = new TreeNode(3);
+           // tree.left.left = new TreeNode(4);
+           // tree.left.right = new TreeNode(5);
+
+            TreeNode tree2 = new TreeNode(1);
+            tree2.left = new TreeNode(2);
+            tree2.right = new TreeNode(3);
+//tree2.left.left = new TreeNode(4);
+           // tree2.left.right = new TreeNode(5);
+
+            SameTree SameTree = new SameTree();
+          var answer=  SameTree.IsSameTree(tree, tree2);
+        }
     }
 
 }
