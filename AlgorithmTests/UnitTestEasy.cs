@@ -179,7 +179,7 @@ namespace AlgorithmTests
             var second = l1.next = new ListNode(2);
             second.next = new ListNode(4);
 
-           
+
 
             var answer = DeleteDuplicatesNodes.DeleteDuplicates(l1);
 
@@ -204,11 +204,11 @@ namespace AlgorithmTests
             int[] num2 = new int[1];
             num2[0] = 1;
             //num2[1] = 4;
-           
 
 
 
-           MergeSortedArrayClass.Merge(ref num1,0,ref num2, 1);
+
+            MergeSortedArrayClass.Merge(ref num1, 0, ref num2, 1);
         }
 
         [TestMethod]
@@ -217,17 +217,34 @@ namespace AlgorithmTests
             TreeNode tree = new TreeNode(1);
             tree.left = new TreeNode(2);
             tree.right = new TreeNode(3);
-           // tree.left.left = new TreeNode(4);
-           // tree.left.right = new TreeNode(5);
+            // tree.left.left = new TreeNode(4);
+            // tree.left.right = new TreeNode(5);
 
             TreeNode tree2 = new TreeNode(1);
             tree2.left = new TreeNode(2);
             tree2.right = new TreeNode(3);
-//tree2.left.left = new TreeNode(4);
-           // tree2.left.right = new TreeNode(5);
+            //tree2.left.left = new TreeNode(4);
+            // tree2.left.right = new TreeNode(5);
 
             SameTree SameTree = new SameTree();
-          var answer=  SameTree.IsSameTree(tree, tree2);
+            var answer = SameTree.IsSameTree(tree, tree2);
+        }
+
+        [TestMethod]
+        public void IsSymmetric()
+        {
+            TreeNode tree = new TreeNode(1);
+            tree.left = new TreeNode(2);
+            tree.right = new TreeNode(2);
+            tree.left.left = new TreeNode(3);
+             tree.left.right = new TreeNode(4);
+            tree.right.left = new TreeNode(4);
+            tree.right.right = new TreeNode(3);
+
+            SymmetricalTree SymmetricalTree = new SymmetricalTree();
+          //  var answer = SymmetricalTree.IsSymmetric(tree);
+
+            var answer = SymmetricalTree.IsSymmetricIterative(tree);
         }
     }
 
