@@ -1,5 +1,6 @@
 using Algorithms.Easy;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 using System.Text;
 
 namespace AlgorithmTests
@@ -237,14 +238,75 @@ namespace AlgorithmTests
             tree.left = new TreeNode(2);
             tree.right = new TreeNode(2);
             tree.left.left = new TreeNode(3);
-             tree.left.right = new TreeNode(4);
+            tree.left.right = new TreeNode(4);
             tree.right.left = new TreeNode(4);
             tree.right.right = new TreeNode(3);
 
             SymmetricalTree SymmetricalTree = new SymmetricalTree();
-          //  var answer = SymmetricalTree.IsSymmetric(tree);
+            //  var answer = SymmetricalTree.IsSymmetric(tree);
 
             var answer = SymmetricalTree.IsSymmetricIterative(tree);
+        }
+
+        [TestMethod]
+        public void MaxDepth()
+        {
+            TreeNode tree = new TreeNode(3);
+            tree.left = new TreeNode(9);
+            tree.right = new TreeNode(20);
+            tree.left.left = new TreeNode(3);
+            tree.left.right = new TreeNode(4);
+            tree.right.left = new TreeNode(15);
+            tree.right.right = new TreeNode(7);
+
+            MaxDepthOfTree MaxDepthOfTree = new MaxDepthOfTree();
+            //  var answer = SymmetricalTree.IsSymmetric(tree);
+
+            var answer = MaxDepthOfTree.MaxDepth(tree);
+        }
+
+        [TestMethod]
+        public void Normalizefile()
+        {
+            int counter = 0;
+            string line;
+            var idlist = new List<string>();
+            // Read the file and display it line by line.  
+            System.IO.StreamReader file =
+                new System.IO.StreamReader(@"D:\3TP\Source.txt");
+            while ((line = file.ReadLine()) != null)
+            {
+                var ids = line.Split(',');
+                foreach (var id in ids)
+                {
+                    idlist.Add("\'" + id.Trim() + "\',");
+                }
+
+                counter++;
+            }
+
+            file.Close();
+
+            System.IO.File.WriteAllLines(@"D:\3TP\destination.txt", idlist);
+
+        }
+
+
+        [TestMethod]
+        public void BinaryTreeOrderTraversal()
+        {
+            TreeNode tree = new TreeNode(3);
+            tree.left = new TreeNode(9);
+            tree.right = new TreeNode(20);
+            tree.left.left = new TreeNode(3);
+            tree.left.right = new TreeNode(4);
+            tree.right.left = new TreeNode(15);
+            tree.right.right = new TreeNode(7);
+
+            BinaryTreeOrderTraversal BinaryTreeOrderTraversal = new BinaryTreeOrderTraversal();
+            //  var answer = SymmetricalTree.IsSymmetric(tree);
+
+            var answer = BinaryTreeOrderTraversal.LevelOrderBottom(tree);
         }
     }
 

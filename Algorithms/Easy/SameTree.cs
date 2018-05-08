@@ -25,7 +25,7 @@ namespace Algorithms.Easy
 
             issame = node?.val == q?.val;
 
-            /* then recur on left sutree */
+            /* then recur on left subtree */
             issame = Comparetrees(node.left, q.left, issame);
 
 
