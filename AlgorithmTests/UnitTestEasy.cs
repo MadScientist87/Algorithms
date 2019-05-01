@@ -308,6 +308,36 @@ namespace AlgorithmTests
 
             var answer = BinaryTreeOrderTraversal.LevelOrderBottom(tree);
         }
+
+        [TestMethod]
+        public void IsBalanced()
+        {
+            TreeNode tree = new TreeNode(3);
+            tree.left = new TreeNode(9);
+            tree.right = new TreeNode(20);
+            tree.right.left = new TreeNode(15);
+            tree.right.right = new TreeNode(7);
+
+            IsBalancedClass IsBalancedTree = new IsBalancedClass();
+            var answer = IsBalancedTree.IsBalanced(tree);
+
+            Assert.IsTrue(answer);
+        }
+
+        [TestMethod]
+        public void BinaryClassSum()
+        {
+            TreeNode tree = new TreeNode(3);
+            tree.left = new TreeNode(9);
+            tree.right = new TreeNode(20);
+            tree.right.left = new TreeNode(15);
+            tree.right.right = new TreeNode(7);
+
+            BinaryClassSum BinaryClassSum = new BinaryClassSum();
+            var answer = BinaryClassSum.HasPathSum(tree,12);
+
+            Assert.IsTrue(answer);
+        }
     }
 
 }
