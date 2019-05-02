@@ -338,6 +338,38 @@ namespace AlgorithmTests
 
             Assert.IsTrue(answer);
         }
+
+        [TestMethod]
+        public void PascalsTriangle()
+        {
+
+            PascalTriangle PascalTriangle = new PascalTriangle();
+            var answer = PascalTriangle.Generate(5);
+
+           // Assert.IsTrue(answer);
+        }
+
+        [TestMethod]
+        public void PascalsTriangle2()
+        {
+
+            Pascaltriangle2 PascalTriangle = new Pascaltriangle2();
+            var answer = PascalTriangle.GetRow(5);
+
+            // Assert.IsTrue(answer);
+        }
+
+        [TestMethod]
+        public void MaxStockProfit()
+        {
+
+            MaxStockProfit MaxStockProfit = new MaxStockProfit();
+
+            var array = new int[] {7, 1, 5, 3, 6, 4};
+            var answer = MaxStockProfit.MaxProfit2(array);
+
+            // Assert.IsTrue(answer);
+        }
     }
 
 }

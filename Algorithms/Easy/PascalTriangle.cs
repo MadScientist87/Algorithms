@@ -7,19 +7,32 @@ namespace Algorithms.Easy
     {
         public IList<IList<int>> Generate(int numRows)
         {
+            IList<IList<int>> result = new List<IList<int>>();
 
-            var mainList = new List<int>();
-
-            for(var x = 0; x< numRows;x++)
+            for (int i = 0; i < numRows; i++)
             {
-                var pre = new List<int>();
-                var newList = new List<int>();
-                for (var j = 1;j < pre.Count-1;j++)
+                List<int> subList = new List<int>();
+
+                for (int j = 0; j <= i; j++)
                 {
-                    var sum = pre[j] + pre[j + 1];
-                    newList.Add(sum);
+                    int val = 0;
+                    if (j == 0 || j == i)
+                    {
+                        val = 1;
+
+                    }
+                    else
+                    {
+                        val = result[i - 1][j - 1] + result[i - 1][j];
+                    }
+
+                    subList.Add(val);
                 }
+
+                result.Add(subList);
             }
+
+            return result;
         }
     }
 }
