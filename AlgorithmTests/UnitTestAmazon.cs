@@ -12,7 +12,7 @@ namespace AlgorithmTests
     public class UnitTestAmazon
     {
         [TestMethod]
-        public void FirstMethod()
+        public void AddTwoNumbers()
         {
             var l1 = new ListNode(2);
             l1.next = new ListNode(4);
