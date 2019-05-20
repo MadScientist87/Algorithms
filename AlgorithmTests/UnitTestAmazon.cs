@@ -34,6 +34,11 @@ namespace AlgorithmTests
             LengthOfLongestSubstringClass.LengthOfLongestSubstring("abcabcbb");
         }
 
-
+        [TestMethod]
+        public void MedianOfTwoSortedArrays()
+        {
+            MedianOfTwoSortedArrays MedianOfTwoSortedArrays = new MedianOfTwoSortedArrays();
+            MedianOfTwoSortedArrays.FindMedianSortedArrays(new int[]{1,3}, new int[]{2});
+        }
     }
 }
