@@ -28,5 +28,16 @@ namespace AlgorithmTests
             ob.sort(arr, 0, arr.Length - 1);
 
         }
+
+        [TestMethod]
+        public void KthSmallest()
+        {
+
+            int[] arr = {12, 11, 13, 4, 3, 7};
+            int n = arr.Length;
+            int k = 2;
+            QuickSelect qs = new QuickSelect();
+          var answer=  qs.KthSmallest(arr, 0, n - 1, k);
+        }
     }
 }
