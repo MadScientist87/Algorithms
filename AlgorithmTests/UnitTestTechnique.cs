@@ -33,11 +33,11 @@ namespace AlgorithmTests
         public void KthSmallest()
         {
 
-            int[] arr = {12, 11, 13, 4, 3, 7};
+            int[] arr = {12, 11, 13, 13, 13, 7};
             int n = arr.Length;
             int k = 2;
-            QuickSelect qs = new QuickSelect();
-          var answer=  qs.KthSmallest(arr, 0, n - 1, k);
+            QuickSelectOnOwn qs = new QuickSelectOnOwn();
+          var answer=  qs.KthSmallest(arr, 0, n - 1, k-1);
         }
     }
 }
