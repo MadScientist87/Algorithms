@@ -40,5 +40,12 @@ namespace AlgorithmTests
             MedianOfTwoSortedArrays MedianOfTwoSortedArrays = new MedianOfTwoSortedArrays();
             MedianOfTwoSortedArrays.FindMedianSortedArrays(new int[]{1,3}, new int[]{2});
         }
+
+        [TestMethod]
+        public void ReorderLogFiles()
+        {
+            ReorderLogFilesClass ReorderLogFilesClass = new ReorderLogFilesClass();
+            ReorderLogFilesClass.ReorderLogFiles(new string[]{"a1 9 2 3 1", "g1 act car", "zo4 4 7", "ab1 off key dog", "a8 act zoo"});
+        }
     }
 }
