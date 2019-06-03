@@ -58,5 +58,25 @@ namespace AlgorithmTests
             KClosestPointsToOrigin KClosetPointsToOrigin = new KClosestPointsToOrigin();
             KClosetPointsToOrigin.KClosest(array, 1);
         }
+
+        [TestMethod]
+        public void KclosetToOrigin2()
+        {
+            int[] p = { 3,3 }; int[] q = { 5, -1 }; int[] z = { -2, 4 };
+            int[][] array = new int[][] { p, q ,z};
+
+            KClosestPointsToOriginDivideAndConquer KClosetPointsToOrigin = new KClosestPointsToOriginDivideAndConquer();
+            KClosetPointsToOrigin.kClosest(array, 2);
+        }
+
+        [TestMethod]
+        public void LRUCache()
+        {
+            int[] p = { 3, 3 }; int[] q = { 5, -1 }; int[] z = { -2, 4 };
+            int[][] array = new int[][] { p, q, z };
+
+            LRUCache LRUCache = new LRUCache(2);
+            LRUCache.Put(1,1);
+        }
     }
 }
