@@ -48,8 +48,7 @@ namespace Algorithms.Technique
                     return KthSmallest(arr, left, index - 1, k);
 
                 // Else recur for right subarray 
-                return KthSmallest(arr, index + 1, right,
-                    k);
+                return KthSmallest(arr, index + 1, right, k);
             }
 
             return Int32.MinValue;
