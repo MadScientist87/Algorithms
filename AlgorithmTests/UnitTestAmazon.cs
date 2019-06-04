@@ -72,11 +72,15 @@ namespace AlgorithmTests
         [TestMethod]
         public void LRUCache()
         {
-            int[] p = { 3, 3 }; int[] q = { 5, -1 }; int[] z = { -2, 4 };
-            int[][] array = new int[][] { p, q, z };
-
             LRUCache LRUCache = new LRUCache(2);
             LRUCache.Put(1,1);
+        }
+
+        [TestMethod]
+        public void LongestPalindromeSubString()
+        {
+            LongestPalindromeSubString LongestPalindromeSubString = new LongestPalindromeSubString();
+            LongestPalindromeSubString.LongestPalindrome("babad");
         }
     }
 }
