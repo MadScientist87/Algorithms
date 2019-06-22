@@ -22,7 +22,7 @@ namespace Algorithms.Amazon
                 }
 
             }
-            return s.Substring(start, end + 1);
+            return s.Substring(start, end);
         }
 
         private int ExpandAroundCenter(String s, int left, int right)

@@ -38,21 +38,23 @@ namespace AlgorithmTests
         public void MedianOfTwoSortedArrays()
         {
             MedianOfTwoSortedArrays MedianOfTwoSortedArrays = new MedianOfTwoSortedArrays();
-            MedianOfTwoSortedArrays.FindMedianSortedArrays(new int[]{1,3}, new int[]{2});
+            MedianOfTwoSortedArrays.FindMedianSortedArrays(new int[] { 1, 3 }, new int[] { 2 });
         }
 
         [TestMethod]
         public void ReorderLogFiles()
         {
             ReorderLogFilesClass ReorderLogFilesClass = new ReorderLogFilesClass();
-            ReorderLogFilesClass.ReorderLogFiles(new string[]{"a1 9 2 3 1", "g1 act car", "zo4 4 7", "ab1 off key dog", "a8 act zoo"});
+            ReorderLogFilesClass.ReorderLogFiles(new string[]
+                {"a1 9 2 3 1", "g1 act car", "zo4 4 7", "ab1 off key dog", "a8 act zoo"});
         }
 
 
         [TestMethod]
         public void KclosetToOrigin()
         {
-            int[] p = { 1, 3 }; int[] q = { -2, 2 };
+            int[] p = { 1, 3 };
+            int[] q = { -2, 2 };
             int[][] array = new int[][] { p, q };
 
             KClosestPointsToOrigin KClosetPointsToOrigin = new KClosestPointsToOrigin();
@@ -62,8 +64,10 @@ namespace AlgorithmTests
         [TestMethod]
         public void KclosetToOrigin2()
         {
-            int[] p = { 3,3 }; int[] q = { 5, -1 }; int[] z = { -2, 4 };
-            int[][] array = new int[][] { p, q ,z};
+            int[] p = { 3, 3 };
+            int[] q = { 5, -1 };
+            int[] z = { -2, 4 };
+            int[][] array = new int[][] { p, q, z };
 
             KClosestPointsToOriginDivideAndConquer KClosetPointsToOrigin = new KClosestPointsToOriginDivideAndConquer();
             KClosetPointsToOrigin.kClosest(array, 2);
@@ -73,14 +77,23 @@ namespace AlgorithmTests
         public void LRUCache()
         {
             LRUCache LRUCache = new LRUCache(2);
-            LRUCache.Put(1,1);
+            LRUCache.Put(1, 1);
         }
 
         [TestMethod]
         public void LongestPalindromeSubString()
         {
-            LongestPalindromeSubString LongestPalindromeSubString = new LongestPalindromeSubString();
-            LongestPalindromeSubString.LongestPalindrome("babad");
+            LongestPalindromeOnOwn LongestPalindromeSubString = new LongestPalindromeOnOwn();
+            var answer = LongestPalindromeSubString.LongestPalindrome("babbad");
         }
+
+        [TestMethod]
+        public void MostCommonWord()
+        {
+            MostCommonWordClass MostCommonWord = new MostCommonWordClass();
+            string answer = MostCommonWord.MostCommonWord("bob",
+                new string[] {""});
+        }
+
     }
 }
