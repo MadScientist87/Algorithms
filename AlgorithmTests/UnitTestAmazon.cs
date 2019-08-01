@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Algorithms.Amazon;
@@ -93,6 +94,22 @@ namespace AlgorithmTests
             MostCommonWordClass MostCommonWord = new MostCommonWordClass();
             string answer = MostCommonWord.MostCommonWord("bob",
                 new string[] {""});
+        }
+
+        [TestMethod]
+        public void NumberOfIslands()
+        {
+            NumberOfIslands NumberOfIslands = new NumberOfIslands();
+
+            char[][] grid = new char[4][];
+            grid[0] = new char[]{ '1', '1', '1', '1', '0' };
+            grid[1] = new char[] { '1', '1', '0', '1', '0' };
+            grid[2] = new char[] { '1', '1', '0', '0', '0' };
+            grid[3] = new char[] { '0', '0', '0', '0', '1' };
+         
+
+            int answer = NumberOfIslands.NumIslands(grid);
+
         }
 
     }
