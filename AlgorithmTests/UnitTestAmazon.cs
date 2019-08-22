@@ -112,5 +112,23 @@ namespace AlgorithmTests
 
         }
 
+        [TestMethod]
+        public void PrisonAfterNDays()
+        {
+            PrisonAfterNDaysClass PrisonAfterNDays = new PrisonAfterNDaysClass();
+            int[] cells = new int []{ 1, 0, 0, 1, 0, 0, 1, 0 };
+
+            var answer = PrisonAfterNDays.PrisonAfterNDays(cells,4);
+        }
+
+        [TestMethod]
+        public void FirstUniqChar()
+        {
+            FirstUniqCharClass firstUniqCharvar = new FirstUniqCharClass();
+            string s = "aadadaad";
+
+            var answer = firstUniqCharvar.FirstUniqChar(s);
+        }
+
     }
 }
