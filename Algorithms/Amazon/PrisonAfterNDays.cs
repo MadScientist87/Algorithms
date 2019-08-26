@@ -5,16 +5,23 @@ namespace Algorithms.Amazon
     {
         public int[] PrisonAfterNDays(int[] cells, int N)
         {
-            int state = 0;
-            for (int i = 0; i < 8; ++i)
+            if (N == 0) return cells;
+            N = N % 14 == 0 ? 14 : N % 14;
+
+            int[] newCells = new int[8];
+
+            while (N-- > 0)
             {
-                if (cells[i] > 0)
-                    state ^= 1 << i;
+                for (int i = 1; i < 7; i++)
+                    if (cells[i - 1] == cells[i + 1])
+                        newCells[i] = 1;
+                    else
+                        newCells[i] = 0;
+                cells = newCells;
+                newCells = new int[8];
             }
 
-            int[] ans = new int[8];
-
-            return ans;
+            return cells;
         }
     }
 }

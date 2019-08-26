@@ -12,5 +12,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="BitManipulation\" />
+    <Folder Include="Amazon\AmazonOnlineAssessment\" />
   </ItemGroup>
 </Project>
