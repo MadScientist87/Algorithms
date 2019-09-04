@@ -112,5 +112,14 @@ namespace AlgorithmTests
 
         }
 
+
+        [TestMethod]
+        public void PartitionLabels()
+        {
+            PartitionLabelsClass PartitionLabels = new PartitionLabelsClass();
+            IList<int> answer = PartitionLabels.PartitionLabels2("ababcbacadefegdehijhklij");
+        }
+
+
     }
 }
