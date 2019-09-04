@@ -5,7 +5,7 @@ using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Algorithms.Amazon;
 using Algorithms.Easy;
-
+using Algorithms.Amazon.AmazonOnlineAssessment;
 
 namespace AlgorithmTests
 {
@@ -93,7 +93,7 @@ namespace AlgorithmTests
         {
             MostCommonWordClass MostCommonWord = new MostCommonWordClass();
             string answer = MostCommonWord.MostCommonWord("bob",
-                new string[] {""});
+                new string[] { "" });
         }
 
         [TestMethod]
@@ -102,14 +102,72 @@ namespace AlgorithmTests
             NumberOfIslands NumberOfIslands = new NumberOfIslands();
 
             char[][] grid = new char[4][];
-            grid[0] = new char[]{ '1', '1', '1', '1', '0' };
+            grid[0] = new char[] { '1', '1', '1', '1', '0' };
             grid[1] = new char[] { '1', '1', '0', '1', '0' };
             grid[2] = new char[] { '1', '1', '0', '0', '0' };
             grid[3] = new char[] { '0', '0', '0', '0', '1' };
-         
+
 
             int answer = NumberOfIslands.NumIslands(grid);
 
+        }
+
+        [TestMethod]
+        public void PrisonAfterNDays()
+        {
+            PrisonAfterNDaysClass PrisonAfterNDays = new PrisonAfterNDaysClass();
+            int[] cells = new int[] { 1, 0, 0, 1, 0, 0, 1, 0 };
+
+            var answer = PrisonAfterNDays.PrisonAfterNDays(cells, 4);
+        }
+
+        [TestMethod]
+        public void FirstUniqChar()
+        {
+            FirstUniqCharClass firstUniqCharvar = new FirstUniqCharClass();
+            string s = "aadadaad";
+
+            var answer = firstUniqCharvar.FirstUniqChar(s);
+        }
+
+        [TestMethod]
+        public void MoviesOnFlight()
+        {
+            MoviesOnFlightClass MoviesOnFlight = new MoviesOnFlightClass();
+            int[] durations = new int[] { 90, 85, 75, 60, 120, 150, 125 };
+            var answer = MoviesOnFlight.MoviesOnFlight(durations, 250);
+        }
+
+        [TestMethod]
+        public void TreasureIsland()
+        {
+            TreasureIslandClass TreasureIsland = new TreasureIslandClass();
+
+            char[][] island = new char[][]{
+            new char[]{'O', 'O', 'O', 'O'},
+            new char[]{'D', 'O', 'D', 'O'},
+            new char[]{'O', 'O', 'O', 'O'},
+            new char[]{'X', 'D', 'D', 'O'}
+            };
+            var answer = TreasureIsland.TreasureIsland(island);
+        }
+
+        [TestMethod]
+        public void AmazonsSortCenterClass()
+        {
+            AmazonsSortCenterClass AmazonsSortCenter = new AmazonsSortCenterClass();
+
+            int[] packagesSpace = new[] { 1, 10,20, 25, 35,40,60 };
+            var answer = AmazonsSortCenter.AmazonsSortCenter(90,packagesSpace);
+        }
+
+        [TestMethod]
+        public void RollDice()
+        {
+            RollDiceClass rollDice = new RollDiceClass();
+
+            int[] dice = new[] { 1, 2,3 };
+            var answer = rollDice.RollDice(dice);
         }
 
 
