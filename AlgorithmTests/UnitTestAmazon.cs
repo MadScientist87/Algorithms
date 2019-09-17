@@ -172,14 +172,13 @@ namespace AlgorithmTests
 
 
         [TestMethod]
-<<<<<<< HEAD
         public void PartitionLabels()
         {
             PartitionLabelsClass PartitionLabels = new PartitionLabelsClass();
             IList<int> answer = PartitionLabels.PartitionLabels2("ababcbacadefegdehijhklij");
         }
 
-=======
+
         public void MinCosttoConnectAllNodes()
         {
             MinCosttoConnectAllNodesClassOnOwn minCosttoConnectAllNodes = new MinCosttoConnectAllNodesClassOnOwn();
@@ -206,7 +205,6 @@ namespace AlgorithmTests
             int[][] edgesToRepair2 = { new int[] { 1, 6, 410 }, new int[] { 2, 4, 800 } };
             var answer2 = minCosttoConnectAllNodes.MinCosttoConnectAllNodes(nodes2, edges2, edgesToRepair2);
         }
->>>>>>> b63de80... * MinCosttoConnectAllNodes.cs: Graph Problems
 
     }
 }
