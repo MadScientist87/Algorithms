@@ -172,12 +172,41 @@ namespace AlgorithmTests
 
 
         [TestMethod]
+<<<<<<< HEAD
         public void PartitionLabels()
         {
             PartitionLabelsClass PartitionLabels = new PartitionLabelsClass();
             IList<int> answer = PartitionLabels.PartitionLabels2("ababcbacadefegdehijhklij");
         }
 
+=======
+        public void MinCosttoConnectAllNodes()
+        {
+            MinCosttoConnectAllNodesClassOnOwn minCosttoConnectAllNodes = new MinCosttoConnectAllNodesClassOnOwn();
+
+            int nodes = 6;
+            int[][] edges = { new int[] { 1, 4 }, new int[] { 4, 5 }, new int[] { 2, 3 } };
+            int[][] newEdges = { new int[] { 1, 2, 5 }, new int[] { 1, 3, 10 }, new int[] { 1, 6, 2 }, new int[] { 5, 6, 5 } };
+            var answer = minCosttoConnectAllNodes.MinCosttoConnectAllNodes(nodes, edges, newEdges);
+        }
+
+        [TestMethod]
+        public void MinCosttoConnectToRepairEdges()
+        {
+
+            MinCosttoRepairEdgesClass minCosttoConnectAllNodes = new MinCosttoRepairEdgesClass();
+            int nodes = 5;
+            int[][] edges = { new int[] { 1, 2 }, new int[] { 2, 3 }, new int[] { 3, 4 }, new int[] { 4, 5 }, new int[] { 1, 5 } };
+            int[][] edgesToRepair = { new int[] { 1, 2, 12 }, new int[] { 3, 4, 30 }, new int[] { 1, 5, 8 } };
+            var answer = minCosttoConnectAllNodes.MinCosttoConnectAllNodes(nodes, edges, edgesToRepair); 
+
+
+            int nodes2 = 6;
+            int[][] edges2 = { new int[] { 1, 2 }, new int[] { 2, 3 }, new int[] { 4, 5 }, new int[] { 3, 5 }, new int[] { 1, 6 }, new int []{2, 4} };
+            int[][] edgesToRepair2 = { new int[] { 1, 6, 410 }, new int[] { 2, 4, 800 } };
+            var answer2 = minCosttoConnectAllNodes.MinCosttoConnectAllNodes(nodes2, edges2, edgesToRepair2);
+        }
+>>>>>>> b63de80... * MinCosttoConnectAllNodes.cs: Graph Problems
 
     }
 }
