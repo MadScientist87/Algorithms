@@ -13,5 +13,9 @@
   <ItemGroup>
     <Folder Include="BitManipulation\" />
     <Folder Include="Amazon\AmazonOnlineAssessment\" />
+    <Folder Include="Trees\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Amazon\AmazonOnlineAssessment\MinCosttoConnectAllNodes.cs" />
   </ItemGroup>
 </Project>

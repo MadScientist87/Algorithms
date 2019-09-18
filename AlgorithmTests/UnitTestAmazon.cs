@@ -157,8 +157,8 @@ namespace AlgorithmTests
         {
             AmazonsSortCenterClass AmazonsSortCenter = new AmazonsSortCenterClass();
 
-            int[] packagesSpace = new[] { 1, 10,20, 25, 35,40,60 };
-            var answer = AmazonsSortCenter.AmazonsSortCenter(90,packagesSpace);
+            int[] packagesSpace = new[] { 1, 10, 20, 25, 35, 40, 60 };
+            var answer = AmazonsSortCenter.AmazonsSortCenter(90, packagesSpace);
         }
 
         [TestMethod]
@@ -166,7 +166,7 @@ namespace AlgorithmTests
         {
             RollDiceClass rollDice = new RollDiceClass();
 
-            int[] dice = new[] { 1, 2,3 };
+            int[] dice = new[] { 1, 2, 3 };
             var answer = rollDice.RollDice(dice);
         }
 
@@ -197,13 +197,21 @@ namespace AlgorithmTests
             int nodes = 5;
             int[][] edges = { new int[] { 1, 2 }, new int[] { 2, 3 }, new int[] { 3, 4 }, new int[] { 4, 5 }, new int[] { 1, 5 } };
             int[][] edgesToRepair = { new int[] { 1, 2, 12 }, new int[] { 3, 4, 30 }, new int[] { 1, 5, 8 } };
-            var answer = minCosttoConnectAllNodes.MinCosttoConnectAllNodes(nodes, edges, edgesToRepair); 
+            var answer = minCosttoConnectAllNodes.MinCosttoConnectAllNodes(nodes, edges, edgesToRepair);
 
 
             int nodes2 = 6;
-            int[][] edges2 = { new int[] { 1, 2 }, new int[] { 2, 3 }, new int[] { 4, 5 }, new int[] { 3, 5 }, new int[] { 1, 6 }, new int []{2, 4} };
+            int[][] edges2 = { new int[] { 1, 2 }, new int[] { 2, 3 }, new int[] { 4, 5 }, new int[] { 3, 5 }, new int[] { 1, 6 }, new int[] { 2, 4 } };
             int[][] edgesToRepair2 = { new int[] { 1, 6, 410 }, new int[] { 2, 4, 800 } };
             var answer2 = minCosttoConnectAllNodes.MinCosttoConnectAllNodes(nodes2, edges2, edgesToRepair2);
+        }
+
+        [TestMethod]
+        public void MinCostToConnectRopes()
+        {
+            MinCostToConnectRopesClass MinCostToConnectRopes = new MinCostToConnectRopesClass();
+            int[] files = new[] { 8, 4, 6, 12 };
+            var answer = MinCostToConnectRopes.MinCostToConnectRopes(files);
         }
 
     }
