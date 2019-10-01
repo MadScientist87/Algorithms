@@ -14,6 +14,7 @@
     <Folder Include="BitManipulation\" />
     <Folder Include="Amazon\AmazonOnlineAssessment\" />
     <Folder Include="Trees\" />
+    <Folder Include="StringManipulation\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Amazon\AmazonOnlineAssessment\MinCosttoConnectAllNodes.cs" />

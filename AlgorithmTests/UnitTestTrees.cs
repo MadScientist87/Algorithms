@@ -128,5 +128,45 @@ namespace AlgorithmTests
 
             CollectionAssert.AreEqual(result, answer);
         }
+
+        [TestMethod]
+        public void BFSLevelOrderTraversalIterative()
+        {
+            BFSTreeSearchClass DFSTreeSearch = new BFSTreeSearchClass();
+
+            TreeNode tree = new TreeNode(1);
+            tree.left = new TreeNode(2);
+            tree.right = new TreeNode(3);
+            tree.left.left = new TreeNode(4);
+            tree.left.right = new TreeNode(5);
+
+            DFSTreeSearch.LevelOrderTravesal(tree);
+
+            List<int> result = new List<int>() { 1, 2, 3, 4, 5 };
+            List<int> answer = DFSTreeSearch.result;
+
+
+            CollectionAssert.AreEqual(result, answer);
+        }
+
+        [TestMethod]
+        public void BFSReverseLevelOrderTraversalIterative()
+        {
+            BFSTreeSearchClass DFSTreeSearch = new BFSTreeSearchClass();
+
+            TreeNode tree = new TreeNode(1);
+            tree.left = new TreeNode(2);
+            tree.right = new TreeNode(3);
+            tree.left.left = new TreeNode(4);
+            tree.left.right = new TreeNode(5);
+
+            var test= DFSTreeSearch.ZigzagLevelOrder(tree);
+
+            List<int> result = new List<int>() { 5, 4, 3, 2, 1 };
+            List<int> answer = DFSTreeSearch.result;
+
+
+            //CollectionAssert.AreEqual(result, answer);
+        }
     }
 }

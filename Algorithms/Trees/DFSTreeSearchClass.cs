@@ -95,7 +95,6 @@ namespace Algorithms.Trees
 
             while (s.Count != 0)
             {
-
                 node = s.Pop();
                 output.Push(node.val);
                 if (node.left != null) s.Push(node.left);

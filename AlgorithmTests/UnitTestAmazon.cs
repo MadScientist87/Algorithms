@@ -214,5 +214,12 @@ namespace AlgorithmTests
             var answer = MinCostToConnectRopes.MinCostToConnectRopes(files);
         }
 
+        [TestMethod]
+        public void MergeStones()
+        {
+            MergeStonesOnOwnClass MergeStones = new MergeStonesOnOwnClass();
+            int[] stones = new[] { 3, 5,1,2,6 };
+            var answer = MergeStones.MergeStones(stones, 3);
+        }
     }
 }
