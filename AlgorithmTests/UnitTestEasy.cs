@@ -195,17 +195,17 @@ namespace AlgorithmTests
         public void MergeSortedArray()
         {
             MergeSortedArrayClass MergeSortedArrayClass = new MergeSortedArrayClass();
-            int[] num1 = new int[1];
-            //num1[0] = 0;
-            //num1[1] = 2;
-            //num1[2] = 3;
-            //num1[3] = 4;
-            //num1[4] = 5;
-
-            int[] num2 = new int[1];
-            num2[0] = 1;
-            //num2[1] = 4;
-
+            int[] num1 = new int[6];
+            num1[0] = 1;
+            num1[1] = 2;
+            num1[2] = 3;
+            num1[3] = 0;
+            num1[4] = 0;
+            num1[5] = 0;
+            int[] num2 = new int[3];
+            num2[0] = 2;
+            num2[1] = 4;
+            num2[1] = 5;
 
 
 
