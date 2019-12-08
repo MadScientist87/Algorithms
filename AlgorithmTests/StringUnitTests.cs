@@ -64,7 +64,7 @@ namespace AlgorithmTests
         
 
 
-            var answer = wordBreak.SearchMatrix(matrix,0);
+            var answer = wordBreak.FindNumber(100398,100999 );
 
         }
 

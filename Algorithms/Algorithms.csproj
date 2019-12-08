@@ -17,6 +17,10 @@
     <Folder Include="StringManipulation\" />
     <Folder Include="Medium\" />
     <Folder Include="Tries\" />
+    <Folder Include="EPI\" />
+    <Folder Include="EPI\BitManipulation\" />
+    <Folder Include="Coursea\" />
+    <Folder Include="Coursea\DiscreteMath\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Amazon\AmazonOnlineAssessment\MinCosttoConnectAllNodes.cs" />

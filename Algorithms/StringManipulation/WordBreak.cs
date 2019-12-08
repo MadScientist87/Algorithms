@@ -1040,5 +1040,59 @@ namespace Algorithms.StringManipulation
             }
             return false;
         }
+
+        public  bool IsPalindrome(string s)
+        {
+            s = CleanString(s);
+            if (string.IsNullOrEmpty(s))
+                return true;
+
+            int tail = s.Length - 1;
+            int start = 0;
+
+            while (tail > start)
+            {
+                if (s[start] != s[tail])
+                    return false;
+                tail--;
+                start++;
+            }
+
+            return true;
+
+
+        }
+
+        private  string CleanString(string s)
+        {
+                var newString = "";
+
+                foreach (char c in s)
+                {
+
+                if(char.IsDigit(c))
+                    newString += c;
+                else if (char.IsLetter(c))
+                    {
+                        if (c < 97)
+                            newString += (char)(c + 32);
+                        else
+                            newString += c;
+                    }
+                }
+
+                return newString;
+        }
+
+        public int FindNumber(int start, int end)
+        {
+            for(int i = start;i < end +1;i++)
+            {
+                if (i % 9127 == 0)
+                    return i;
+            }
+
+            return -1;
+        }
     }
 }

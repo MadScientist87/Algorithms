@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Algorithms.BitManipulation;
+using Algorithms.EPI.BitManipulation;
+using System.Collections.Generic;
 
 namespace AlgorithmTests
 {
@@ -43,7 +45,7 @@ namespace AlgorithmTests
             int a = 5;
             int b = 7;
             int c;
-            c= a & b;
+            c = a & b;
             Assert.AreEqual(c, 5);
         }
 
@@ -94,7 +96,7 @@ namespace AlgorithmTests
         public void TestOnesComplement()
         {
             int a = 4;
-            int b ;
+            int b;
 
             b = ~a;
             Assert.AreEqual(b, -5);
@@ -112,8 +114,64 @@ namespace AlgorithmTests
             int a = 4;
             int b;
 
-            b = ~a +1;
+            b = ~a + 1;
             Assert.AreEqual(b, -4);
+        }
+
+        [TestMethod]
+        public void TestRemoveLastBit()
+        {
+            SwapBits.TestREmoveLastBit(5);
+        }
+        [TestMethod]
+        public void DigitalRoot()
+        {
+            var answer = SwapBits.topNCompetitors(5, 2, new List<string> { "anacell", "betacell", "deltacellular", "eruocell", "centracular" },
+                5, new List<string> { "I love anacell Best services provided by anacell in the town", "betacell has great services", "deltacellular provides much better services than betacell",
+                    "betacell is better than than deltacellular" });
+        }
+
+        [TestMethod]
+        public void SwapBitsTest()
+        {
+            var answer = SwapBits.SwapBitsByPosition(5, 1, 2);
+        }
+
+        [TestMethod]
+        public void ClosestIntSameBitCount()
+        {
+            var answer = ClosestIntSameBitCountClass.ClosestIntSameBitCount(5);
+            Assert.AreEqual(answer, 6);
+        }
+
+
+        // 0(1) time and space
+        [TestMethod]
+        public void ClosestIntSameBitCountMoreEfficient()
+        {
+            var answer = ClosestIntSameBitCountClass.closestInt(5);
+            Assert.AreEqual(answer, (uint)6);
+        }
+
+        [TestMethod]
+        public void DivideUsingBitManipulationTest()
+        {
+            var answer = DivideUsingBitManipulation.Divide(10,3);
+            Assert.AreEqual(answer, 3);
+        }
+
+        [TestMethod]
+        public void RaiseToThePower()
+        {
+            var answer = PowerClass.Power(4, 2);
+            Assert.AreEqual(answer, 16.0);
+        }
+
+        [TestMethod]
+        public void IsPalindroneNumber()
+        {
+            var answer = IsPalindroneNumberClass.IsPalindroneNumber(3773);
+            Assert.AreEqual(answer, true);
         }
     }
 }
