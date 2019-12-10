@@ -181,7 +181,7 @@ namespace AlgorithmTests
             tree.right.left = new TreeNode(6);
             tree.right.right = new TreeNode(9);
 
-           var answer= InvertTreeClass.InvertTree(tree);
+            var answer = InvertTreeClass.InvertTree(tree);
         }
 
         [TestMethod]
@@ -204,7 +204,7 @@ namespace AlgorithmTests
             TreeNode tree = new TreeNode(1);
             tree.left = new TreeNode(2);
             tree.right = new TreeNode(3);
-            
+
             tree.left.right = new TreeNode(4);
 
             var answer = PrintTreeOnOwn.PrintTree(tree);
@@ -239,6 +239,15 @@ namespace AlgorithmTests
             tree.left.right.right = new TreeNode(4);
 
             var answer = LowestCommonAncestorClass.LowestCommonAncestor(tree, new TreeNode(2), new TreeNode(0));
+        }
+
+        [TestMethod]
+        public void UniqueBinarySearchTree()
+        {
+            var array = new int[] { 2, 1, 3 };
+            var tree =UniqueBinarySearchTreeClass.NumTrees(3);
+            var test = "";
+
         }
     }
 }
